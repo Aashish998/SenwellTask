@@ -1,0 +1,15 @@
+<table>
+    <thead>
+      <tr>
+        <th>Names</th>
+        <th>Counts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let nameCount of nameCounts" 
+          [ngStyle]="{'background-color': getRowColor(nameCount.count)}">
+        <td>{{ nameCount.name }}</td>
+        <td>{{ nameCount.count }}</td>
+      </tr>
+    </tbody>
+  </table>
